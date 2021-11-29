@@ -7,13 +7,8 @@ import * as assert from 'assert';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import * as vscode from 'vscode';
-import cp = require('child_process');
-import jsDiff = require('diff');
-import { getBinPath, getGoVersion, isVendorSupported } from '../src/util';
 import { documentSymbols } from '../src/goOutline';
-import { getAllPackages } from '../src/goPackages';
 import { getImportPath } from '../src/util';
-import { print } from 'util';
 
 suite('Go Extension Tests', () => {
 	let gopath = process.env['GOPATH'];
